@@ -1,7 +1,7 @@
 export const throwIfMissing = (obj, keys) => {
     const missing = [];
     for (let key of keys) {
-        if (!(key in obj) || !obj[key]) {
+        if (!(key in obj) || (!obj[key] && obj[key] != 0)) {
             missing.push(key);
         }
     }
