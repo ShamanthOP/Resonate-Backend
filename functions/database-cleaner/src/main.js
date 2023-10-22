@@ -13,7 +13,7 @@ export default async (context) => {
     const appwrite = new AppwriteService();
 
     try {
-        await appwrite.cleanPartcipantsCollection();
+        await appwrite.cleanParticipantsCollection();
     } catch (e) {
         context.error(String(e));
     }
